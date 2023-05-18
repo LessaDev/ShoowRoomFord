@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="assets/img/logo/ford-logo.png" />
+    <title>Showroom Ford</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryColor: "#148cd1",
+                        primaryDarkColor: "#003774"
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+
+<body class="bg-white">
+    <div id="home" class="bg-slate-900">
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav class="flex sticky top-0 items-center justify-between  p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Showroom Ford</span>
+                        <img class="h-8 w-auto" src="assets/img/logo/ford-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="#Inicio"
+                        class="text-sm font-semibold leading-6 text-white rounded-lg py-2 pl-6 pr-6 hover:bg-gray-100 hover:text-gray-800">Iniciativa</a>
+                    <a href="#Produtos"
+                        class="text-sm font-semibold leading-6 text-white rounded-lg py-2 pl-6 pr-6 hover:bg-gray-100 hover:text-gray-800">Nossos
+                        Carros</a>
+                    <a href=" #Contato"
+                        class="text-sm font-semibold leading-6 text-white rounded-lg py-2 pl-6 pr-6 hover:bg-gray-100 hover:text-gray-800">Contato</a>
+                </div>
+                <div class=" hidden lg:flex lg:flex-1 lg:justify-end"></div>
+            </nav>
+            <!-- Mobile menu, show/hide based on menu open state. -->
+            <div class="lg:hidden" role="dialog" aria-modal="true">
+                <!-- Background backdrop, show/hide based on slide-over state. -->
+                <div class="fixed inset-0 z-50"></div>
+                <div
+                    class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div class="flex items-center justify-between">
+                        <a href="#home" class="-m-1.5 p-1.5">
+                            <span class="sr-only">Your Company</span>
+                            <img class="h-8 w-auto" src="assets/img/logo/ford-logo.png" alt="">
+                        </a>
+                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                            <span class="sr-only">Close menu</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="space-y-2 py-6">
+                                <a href="#Inicio"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Iniciativa</a>
+                                <a href="#Produtos"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Nossos
+                                    Carros</a>
+                                <a href="#Contato"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contato</a>
+                            </div>
+                            <div class="py-6">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#00ff04] to-[#f200ff] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                </div>
+            </div>
+            <div class=" FORD mx-auto max-w-2xl pb-32 ">
+                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                </div>
+                <div class="text-center">
+                    <img src="assets/img/logo/ford-logo.png" alt="">
+                    <h1 class=" flex text-4xl font-bold tracking-tight text-white sm:text-6xl">Velocidade
+                        que
+                        corre pelas
+                        veias</h1>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#Inicio"
+                            class="rounded-md bg-primaryColor px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primaryDarkColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            Ver mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                aria-hidden="true">
+                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#f200ff] to-[#00ff04] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] -mt-48"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p id="Inicio" class=" text-center mt-10 text-3xl font-bold tracking-tight text-gray-900 mb-4 sm:text-4xl">Carros
+        para
+        amantes de carros</p>
+
+    <div class="overflow-hidden bg-white py-24 sm:py-32">
+        <div class="animateRigth mx-auto max-w-7xl px-6 lg:px-8">
+            <div
+                class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                <div class="lg:pr-8 lg:pt-4">
+                    <div class="lg:max-w-lg">
+                        <p class="mt-10 text-3xl font-bold tracking-tight text-gray-900 mb-4 sm:text-4xl">Para todos os
+                            bolsos</p>
+
+                        <h2 class="text-base font-semibold leading-7 text-primaryDarkColor">Ford Ka - Hatch Cross -
+                            Hatch - Sedan
+                        </h2>
+
+                        <dl class="mt-12 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/suspensao-do-carro.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+                                    </img>
+                                    Hatch Cross.
+                                </dt>
+                                <dd class="inline">Para aqueles que querem o conforto de um carro um pouco mais alto mas
+                                    sem perder o espaço compacto de um hatch.</dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/predio-comercial.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+
+                                    </img>
+                                    Hatch.
+                                </dt>
+                                <dd class="inline">Para aqueles querem um carro compacto e agil para o dia a dia urbano.
+                                </dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/familia.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+                                    </img>
+                                    Sedan.
+                                </dt>
+                                <dd class="inline">Para aqueles querem a economia e segurança que sua familia merece.
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <img src="assets/img/carros/ford-ka.jpeg" alt="Product screenshot"
+                    class="w-[52rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:ml-8"
+                    width="1920" height="1080">
+            </div>
+        </div>
+    </div>
+
+    <div class=" -mt-24 overflow-hidden bg-white py-24 sm:py-32">
+        <div class="animateLeft mx-auto max-w-7xl px-6 lg:px-8">
+            <div
+                class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                <img src="assets/img/carros/UsvPickup.png" alt="Product screenshot"
+                    class="w-[52rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:ml-70 lg:-ml-96"
+                    width="1920" height="1080">
+                <div class="lg:pr-8 lg:pt-4">
+                    <div class="lg:max-w-lg">
+                        <p class="mt-4 text-3xl font-bold tracking-tight text-gray-900 mb-4 sm:text-4xl">Para Todos os
+                            terrenos</p>
+
+                        <h2 class="text-base font-semibold leading-7 text-primaryDarkColor">Ford Explorer - F-150 -
+                            Bronco
+                        </h2>
+
+                        <dl class="mt-12 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/familia.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+                                    </img>
+                                    Usv.
+                                </dt>
+                                <dd class="inline">Para aqueles que querem o conforto, a potencia e espaço de uma PickUp
+                                    para um uso urbano.</dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/carrinho.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+
+                                    </img>
+                                    PickUps.
+                                </dt>
+                                <dd class="inline">Para aqueles que precisam de todo torque de um carro que não foge do
+                                    trabalho pesado.
+                                </dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/suspensao-do-carro.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+                                    </img>
+                                    USV OffRoad.
+                                </dt>
+                                <dd class="inline">Para os terrenos mais difícies, que um carro pode enfrentar .
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="-mt-24 overflow-hidden bg-white py-24 sm:py-32">
+        <div class="animateRigth mx-auto max-w-7xl px-6 lg:px-8">
+            <div
+                class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                <div class="lg:pr-8 lg:pt-4">
+                    <div class="lg:max-w-lg">
+                        <p class="mt-10 text-3xl font-bold tracking-tight text-gray-900 mb-4 sm:text-4xl">Para todas as
+                            iniciativas</p>
+
+                        <h2 class="text-base font-semibold leading-7 text-primaryDarkColor">Ford E-Transit - Mach-E -
+                            Maverick Hibrido
+                        </h2>
+
+                        <dl class="mt-12 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/boxes.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+                                    </img>
+                                    Utilitário.
+                                </dt>
+                                <dd class="inline">Para os mavariados trabalhos e necessidades.</dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/racing-car.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+
+                                    </img>
+                                    Coupe Elétricos.
+                                </dt>
+                                <dd class="inline">Toda a esportividade e potencia que um coupe eletríco pode produzir
+                                    para a cidade.
+                                </dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    <img src="assets/img/icons/engine.png"
+                                        class="absolute left-1 top-1 h-6 w-6 text-indigo-600" viewBox="0 0 20 20"
+                                        fill="currentColor" aria-hidden="true">
+                                    </img>
+                                    PickUp Hybird.
+                                </dt>
+                                <dd class="inline">Para aqueles que não querem abrir mão de toda a voracidade de um
+                                    motor a combustão e procura a sustenbilidade e a economia de um elétirco .
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                <img src="assets/img/carros/eletricos.png" alt="Product screenshot"
+                    class="w-[52rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:ml-8"
+                    width="1920" height="1080">
+            </div>
+        </div>
+    </div>
+
+    <div class="-mt-24 bg-white">
+        <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div
+                class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+                <svg viewBox="0 0 1024 1024"
+                    class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                    aria-hidden="true">
+                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                        fill-opacity="0.7" />
+                    <defs>
+                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                            <stop stop-color="#7775D6" />
+                            <stop offset="1" stop-color="#148cd1" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+                <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+                    <h2 class="text-2xl font-bold tracking-tight text-white sm:text-4xl">Nossos carros
+                        são,<br>Devoradores de prêmios.
+                    </h2>
+                    <p class="mt-12 text-lg leading-8 text-gray-300">A Maverick, A Ranger, O Bronco Sport, O Mustang e a
+                        Transit jusntos ganharam mais de 25 prêmios pelas maiores revistas do mundo automotivo.</p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                    </div>
+                </div>
+                <div class="relative mt-16 h-80 lg:mt-8">
+                    <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                        src="assets/img/carros/carrosCampeos.png" alt="App screenshot" width="1824" height="1080">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-white -mt-24 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 class="text-center text-2xl font-semibold leading-8 text-gray-900">Nossas linhas de carros são
+                imbativeis
+                em
+                prêmios</h2>
+            <div
+                class=" bg-white mx-auto mt-20 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                <img class=" animateToUP col-span-2 max-h-24 w-full object-contain lg:col-span-2"
+                    src="assets/img/logo/mustangLogo.png" alt="Transistor" width="158" height="48">
+                <img class=" animateToUPDelay1 col-span-2 max-h-24 w-full object-contain lg:col-span-1"
+                    src="assets/img/logo/shelby-logo.png" alt="Reform" width="158" height="48">
+                <img class=" animateToUPDelay2 col-span-2 max-h-32 w-full object-contain lg:col-span-2"
+                    src="assets/img/logo/Bronco_Black.png" alt="Tuple" width="158" height="48">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class=" bg-white mt-24 w-full justify-center px-40">
+        <div class=" rounded-xl relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+            <img src="assets/img/carros/todos.png" alt=""
+                class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
+            <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+                aria-hidden="true">
+                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#46e3ff] to-[#776fff] opacity-20"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                </div>
+            </div>
+            <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+                aria-hidden="true">
+                <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#46e3ff] to-[#776fff] opacity-20"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                </div>
+            </div>
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:mx-0">
+                    <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl"> Uma gama completa de escolhas
+                    </h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">Qualidade, desempenho e segurança em primeiro lugar.
+                    </p>
+                </div>
+                <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+                    <dl class=" justify-between mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-base leading-7 text-gray-300">Urbanos e Sports
+                            </dt>
+                            <dd class="text-2xl font-bold leading-9 tracking-tight text-white">Hacth</dd>
+                        </div>
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-base leading-7 text-gray-300">Urbanos e Sports</dt>
+                            <dd class="text-2xl font-bold leading-9 tracking-tight text-white"> Sedans e Copues</dd>
+                        </div>
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-base leading-7 text-gray-300">Urbanos e OffRoad's</dt>
+                            <dd class="text-2xl font-bold leading-9 tracking-tight text-white">USV's</dd>
+                        </div>
+                        <div class="flex flex-col-reverse">
+                            <dt class="text-base leading-7 text-gray-300">Sports e OffRoad's</dt>
+                            <dd class="text-2xl font-bold leading-9 tracking-tight text-white">PickUps</dd>
+                        </div>
+
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Produtos" class="bg-white">
+        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+            <h1 class=" text-center text-2xl font-bold tracking-tight text-gray-900">Não será uma escoha fácil</h1>
+            <h1 class=" text-center text-xl font-bold tracking-tight text-primaryDarkColor">Mas se te conforta todas são
+                certas
+            </h1>
+
+            <div class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80 ">
+                        <img src="assets/img/carros/miniaturas/ecosport.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Ecosport Basic Model
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">2x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$35</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/ecosport.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Ecosport FreeStyle Model
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">2x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$35</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/ecosport.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="tex-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Ecosport Top Model
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">2x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$35</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-70 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/ecosportStorm.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full mt-8 w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Ecosport Storm
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$35</p>
+                    </div>
+
+                </div>
+
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/escapeS.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Escape S
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">2x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$39.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/escapeSe.webp"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Escape Se
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">2x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$42.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/escapeSeTiranium.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Ecosport Top Model
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">2x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$45.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-70 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/escapeTinaniumPlug.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Escape Titanium Plug in
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$50.000</p>
+                    </div>
+
+                </div>
+
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/broncoLight.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Bronco Ligth Limeted
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$39.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/bronco.webp"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Bronco Base
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$42.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/broncoBlack.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Bronco Black
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">2x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$45.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-70 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/broncoRaptor.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Bronco Raptor
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$50.000</p>
+                    </div>
+
+                </div>
+
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/f10curta.webp"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    F-150 Cabine Curta
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x2</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$39.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/f150extendida.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    F-150 Cabine Extendida
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$42.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-75 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/f10Dupla.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    F-150 Cabine Dupla
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$45.000</p>
+                    </div>
+
+                </div>
+                <div class="group relative">
+                    <div
+                        class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none opacity-70 group-hover:opacity-100 lg:h-80">
+                        <img src="assets/img/carros/miniaturas/f150dulpaLimited.png"
+                            alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-96 object-cover object-center group-hover:scale-105 lg:h-44 lg:w-96">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a href="#Contato">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    F-150 Cabine Dupla Limited
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-primaryDarkColor">4x4</p>
+                        </div>
+                        <p class="text-sm font-medium text-gray-900">$50.000</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <p id="Contato" class=" text-center mt-20 text-3xl font-bold tracking-tight text-gray-900 mb-4 sm:text-4xl">Gostou
+        dos
+        carros ?
+    </p>
+    <p class=" text-center mt-4 text-xl font-medium tracking-tight text-primaryColor mb-24 sm:text-2xl">Preencha o
+        formulário
+        para uma vista.
+    </p>
+
+    <form class=" mt-24 w-full justify-center px-96 ">
+        <div class="space-y-12">
+
+
+            <div class="border-b border-gray-900/10 pb-12">
+                <h2 class="text-base text-xl font-semibold leading-7 text-gray-900">
+                    Informações de Contato</h2>
+                <p class="mt-1 text-lg leading-6 text-primaryDarkColor">Entraremos em contato para agendarmos uma
+                    visita.</p>
+
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Name</label>
+                        <div class="mt-2">
+                            <input type="text" required name=nome name="first-name" id="first-name"
+                                autocomplete="given-name"
+                                class="  p-2 bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="last-name"
+                            class="block text-sm font-medium leading-6 text-gray-900">Sobrenome</label>
+                        <div class="mt-2">
+                            <input type="text" required name=nome name="last-name" id="last-name"
+                                autocomplete="family-name"
+                                class=" p-2 bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-4">
+                        <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                        <div class="mt-2">
+                            <input id="email" placeholder="exemplo@mail.com" required
+                                pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+                                title="Por favor digite um email valido. Exemplo:exemplo@mail.com" autocomplete="email"
+                                class=" p-2  bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="country" class="block text-sm font-medium leading-6 text-gray-900">Estados</label>
+                        <div class="mt-2">
+                            <select id="country" name="country" autocomplete="country-name"
+                                class=" bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                                <option>Acre - AC</option>
+                                <option>Alagoas - AL</option>
+                                <option>Amapá - AP</option>
+                                <option>Amazonas - AM</option>
+                                <option>Bahia - BA</option>
+                                <option>Ceará - CE</option>
+                                <option>Espírito Santo - ES</option>
+                                <option>Goiás - GO</option>
+                                <option>Maranhão - MA</option>
+                                <option>Mato Grosso - MT</option>
+                                <option>Mato Grosso do Sul - MS</option>
+                                <option>Minas Gerais - MG</option>
+                                <option>Pará - PA</option>
+                                <option>Paraíba - PB</option>
+                                <option>Paraná - PR</option>
+                                <option>Pernambuco - PE</option>
+                                <option>Piauí - PI</option>
+                                <option>Rio de Janeiro - RJ</option>
+                                <option>Rio Grande do Norte - RN</option>
+                                <option>Rio Grande do Sul - RS</option>
+                                <option>Rondônia - RO</option>
+                                <option>Roraima - RR</option>
+                                <option>Santa Catarina - SC</option>
+                                <option>São Paulo - SP</option>
+                                <option>Sergipe - SE</option>
+                                <option>Tocantins TO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-span-full">
+                        <label for="street-address"
+                            class="block text-sm font-medium leading-6 text-gray-900">Endereço</label>
+                        <div class="mt-2">
+                            <input type="text" name="street-address" id="street-address" autocomplete="street-address"
+                                class=" bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2 sm:col-start-1">
+                        <label for="city" class="block text-sm font-medium leading-6 text-gray-900">Municipio</label>
+                        <div class="mt-2">
+                            <input type="text" name="city" id="city" autocomplete="address-level2"
+                                class=" bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="region" class="block text-sm font-medium leading-6 text-gray-900">Bairro</label>
+                        <div class="mt-2">
+                            <input type="text" name="region" id="region" autocomplete="address-level1"
+                                class=" bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">Cep
+                        </label>
+                        <div class="mt-2">
+                            <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
+                                class=" bg-white block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b border-gray-900/10 pb-12">
+                <h1 class="text-base text-xl font-semibold leading-7 text-gray-900">Noticações</h1>
+                <p class="mt-1 text-lg leading-6 text-primaryDarkColor">
+                    Mandaremos apenas o email de primeiro contato, mas você escolhe o que mais deseja receber.</p>
+
+                <div class="mt-10 space-y-10">
+                    <fieldset>
+                        <legend class="text-sm font-semibold leading-6 text-gray-900">Por Email</legend>
+                        <div class="mt-6 space-y-6">
+                            <div class="flex items-center gap-x-3">
+                                <input id="push-everything" name="push-notifications" type="radio"
+                                    class=" bg-white h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                <label for="push-everything" class="block text-sm font-medium leading-6 text-gray-900">
+                                    Seja notificado sempre que alguma novidade chegar.</label>
+                            </div>
+                            <div class="flex items-center gap-x-3">
+                                <input id="push-email" name="push-notifications" type="radio"
+                                    class="  bg-white h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                <label for="push-email" class="  block text-sm font-medium leading-6 text-gray-900">Seja
+                                    notificado apenas sobre carros novos</label>
+                            </div>
+                            <div class="flex items-center gap-x-3">
+                                <input id="push-nothing" name="push-notifications" type="radio"
+                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                <label for="push-nothing" class="block text-sm font-medium leading-6 text-gray-900">Não
+                                    seja notificado, apenas receba o email de primeiro contato</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex items-center justify-end gap-x-6">
+            <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancelar</button>
+            <button type="submit"
+                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Enviar</button>
+        </div>
+    </form>
+
+    <footer class=" bg-gray-200 mt-10 shadow justify-evenly bt-shadow footer p-10 bg-base-200 text-base-content">
+        <div>
+            <img class="h-24" m-10 src="assets/img/logo/ford-logo.png" alt="">
+            <p>Lessa Dev Ltda.<br />Agradeço a oportunidade </p>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a href="https://br.linkedin.com/in/iago-lessa-648937199?trk=people-guest_people_search-card"
+                class="link link-hover">Sobre nos</a>
+            <a href="https://br.linkedin.com/in/iago-lessa-648937199?trk=people-guest_people_search-card"
+                class="link link-hover">Contato</a>
+        </div>
+        <div>
+            <span class="footer-title">Legal</span>
+            <a class="link link-hover">Termos de uso</a>
+            <a class="link link-hover">Politicas de Privacidade</a>
+            <a class="link link-hover">Politicas de coockies</a>
+        </div>
+        <div>
+            <p class="footer-title">Dados usados</p>
+            <div class="form-control w-80">
+                <label class="label">
+                    <p class="label-text">São ludicus e não reflentem<br>a realidiade. </p>
+                </label>
+
+            </div>
+        </div>
+    </footer>
+    <script src="js/animate.js"></script>
+</body>
+
+</html>
